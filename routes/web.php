@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'film' => 'FILM MCU',
+        'fase_1' => [
+            "Iron Man",
+            "L'Incredibile Hulk",
+            "Iron Man 2",
+            "Thor",
+            "Captain America: Il Primo Vendicatore",
+            "Avengers"
+        ]
+    ];
+    return view('homepage', $data);
 });
