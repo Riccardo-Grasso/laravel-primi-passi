@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $data = [
         'film' => 'FILM MCU',
+    ];
+    return view('homepage', $data);
+});
+
+Route::get('/fase_1', function () {
+    $data = [
         'fase_1' => [
             "Iron Man",
             "L'Incredibile Hulk",
@@ -25,5 +31,55 @@ Route::get('/', function () {
             "Avengers"
         ]
     ];
-    return view('homepage', $data);
-});
+    return view('fase1', $data);
+})->name("fase1");
+
+Route::get('/fase_2', function () {
+    $data = [
+        'fase_2' => [
+            "Iron Man 3",
+            "Thor: The Dark World ",
+            "Captain America: The Winter Soldier",
+            "Guardiani della Galassia",
+            "Avengers: Age of Ultron ",
+            "Ant-Man",
+        ]
+    ];
+    return view('fase2', $data);
+})->name("fase2");
+
+Route::get('/fase_3', function () {
+    $data = [
+        'fase_3' => [
+            "Captain America: Civil War",
+            "Doctor Strange",
+            "Guardiani della Galassia Vol. 2",
+            "Spider-Man: Homecoming",
+            "Thor: Ragnarok",
+            "Black Panther",
+            "Ant-Man and the Wasp ",
+            "Avengers: Infinity War ",
+            "Captain Marvel ",
+            "Avengers: Endgame",
+            "Spider-Man: Far From Home",
+        ]
+    ];
+    return view('fase3', $data);
+})->name("fase3");
+
+Route::get('/fase_4', function () {
+    $data = [
+        'fase_4' => [
+            "Wanda Vision ",
+            "The Falcon and the Winter Soldier",
+            "Loki ",
+            "Black Widow ",
+            "What If… ",
+            "Shang-Chi e la Leggenda dei Dieci Anelli ",
+            "Eternals",
+            "Hawkeye",
+            "Spider-Man: No Way Home",
+        ]
+    ];
+    return view('fase4', $data);
+})->name("fase4");

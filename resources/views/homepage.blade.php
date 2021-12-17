@@ -17,12 +17,13 @@ $titolo = "MCU";
     <h1>Marvel Cinematic Universe</h1>
     <h2>{{$film}}</h2>
 
-    <h3>Fase 1:</h3>
     <ul>
-        @foreach($fase_1 as $movie)
-        <li>{{$movie}}</li>
-        @endforeach
+        <li><a href="{{ route('fase1') }}">Fase 1</a></li>
+        <li><a href="{{ route('fase2') }}">Fase 2</a></li>
+        <li><a href="{{ route('fase3') }}">Fase 3</a></li>
+        <li><a href="{{ route('fase4') }}">Fase 4</a></li>
     </ul>
+
 </body>
 
 </html>
